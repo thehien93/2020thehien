@@ -1,0 +1,13 @@
+select distinct 分類,商品名,サイズ,単価
+from 注文履歴 where 分類 = '1' UNION
+
+select distinct 分類,商品名,NULL,単価 
+from 注文履歴 where 分類 = '2' UNION
+
+select distinct 分類,商品名,NULL,単価 
+from 注文履歴 where 分類 = '3' 
+order by 分類,商品名
+
+
+select 値 from 奇数 union select 値 from 偶数
+select 値 from 整数 union select 値 from 奇数
